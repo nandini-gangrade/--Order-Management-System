@@ -1,6 +1,5 @@
-from dao.order_processor import OrderProcessor
-from entity.user import User
-from entity.product import Product
+from dao import OrderProcessor
+from entity import User, Product
 
 class OrderManagement:
     @staticmethod
@@ -83,12 +82,12 @@ class OrderManagement:
             products = []
             for _ in range(num_products):
                 product_id = int(input("Enter product ID: "))
-                quantity = int(input("Enter quantity: "))  # Get the quantity for the product
-                product = Product(product_id, None, None, None, None, None)  # Create a Product object with only the ID
+                quantity = int(input("Enter quantity: ")) 
+                product = Product(product_id, None, None, None, None, None) 
                 product.set_quantity(quantity)  
                 products.append(product)
             
-            order_processor.create_order(user_id, products)  # Call the create_order method with user_id and products
+            order_processor.create_order(user_id, products)
             print("Order created successfully.")
         except Exception as e:
             print("Error creating order:", e)

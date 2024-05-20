@@ -1,9 +1,7 @@
-from entity.user import User
-from entity.product import Product
-from dao.iorder_management_repository import IOrderManagementRepository
-from util.db_conn_util import DBConnUtil
-from exception.user_not_found_exception import UserNotFoundException
-from exception.order_not_found_exception import OrderNotFoundException
+from entity import User, Product
+from dao import IOrderManagementRepository
+from util import DBConnUtil
+from exception import UserNotFoundException, OrderNotFoundException
 
 class OrderProcessor(IOrderManagementRepository):
     def create_order(self, user_id, products):

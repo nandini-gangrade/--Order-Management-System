@@ -1,8 +1,7 @@
 # iorder_management_repository.py
 
 from abc import ABC, abstractmethod
-from entity.user import User
-from entity.product import Product
+from entity import User, Product
 
 class IOrderManagementRepository(ABC):
     @abstractmethod
