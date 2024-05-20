@@ -1,7 +1,7 @@
 # db_conn_util.py
 
 import pyodbc
-from util import DBPropertyUtil
+from util.db_property_util import DBPropertyUtil
 
 class DBConnUtil:
     @staticmethod
